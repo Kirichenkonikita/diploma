@@ -1,0 +1,525 @@
+@font-face {
+    font-family: 'openSansRegular' ;
+    src: url(../fonts/OpenSans-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'openSansBold' ;
+    src: url(../fonts/OpenSans-Bold.woff) format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+a{
+    text-decoration: none;
+    color: black;
+}
+/* начало верхней части */
+/* body{
+    min-width: 1660px;
+
+} */
+.headerBackground{
+    position: relative;
+    min-height: 450px;
+
+    background-color: black;
+    background-image: url(../images/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    z-index: 0;
+}
+.headerBackground::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 0.5;
+}
+.mainHeader{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 28px 15px 0px 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* логотип */
+.logo{
+    width: 180px;
+    height: 40px;
+
+    z-index: 1;
+}
+/* меню навигации */
+.headerNav{
+    max-width: 988px;
+
+    z-index: 1;
+}
+.headerNavList{
+    padding-top: 12px;
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    column-gap: 35px;
+}
+.headerNavItem a{
+    font-family: 'OpenSansRegular', sans-serif;
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.headerNavItem a:hover{
+    text-decoration: underline;
+}
+/* основной заголовок страницы */
+.pageH1{
+    max-width: 735px;
+    margin-top: 105px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'openSansBold', sans-serif;
+    font-size: 45px;
+    line-height: calc(75/45*100%);
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+
+    z-index: 1;
+}
+/* конец верхней части */
+/* начало основной части */
+.pageContainer{
+    max-width: 1200px;
+    padding: 64px 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 120px;
+}
+/* основная колонка */
+.main{
+    max-width: 778px;
+}
+.mainArticle{
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+.mainArticle:last-child{
+    margin-bottom: 0;
+}
+.mainArticleImg{
+    width: 380px;
+    height: 294px;
+}
+.mainArticleTagsList{
+    list-style-type: none;
+    line-height: 90%;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    justify-content: flex-start;
+}
+.mainArticleTagsItem a{
+    text-decoration: none;
+    font-family: 'openSansBold', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #b59f5b;
+}
+.mainArticleTagsItem a:hover{
+    text-decoration: underline;
+}
+.mainArticleHeader{
+    margin-top: 7px;
+    margin-bottom: 28px;
+    line-height: calc(24/20*100%);  
+    font-family: 'openSansBold', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.mainArticleHeader a{
+    text-decoration: none;
+    color: #0f0d0e;
+}
+.mainArticleHeader a:hover{
+    color: #b59f5b;
+}
+.mainArticleInfo{
+    margin-bottom: 47px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 13px;
+    justify-content: flex-start;
+}
+.mainArticleInfoTime{
+    font-family: 'openSansRegular', sans-serif;
+    font-size: 12px;
+    color: #888;
+}
+.mainArticleInfoAutor{
+    font-family: 'openSansBold', sans-serif;
+    font-size: 12px;
+    color: #000;
+}
+.mainP{
+    font-family: 'openSansRegular', sans-serif;
+    font-size: 15px;
+    line-height: calc(22/15*100%);
+    color: #0f0d0e;
+    margin-bottom: 8px;
+}
+/* побочная часть страницы */
+/* список новостей */
+.asideTopics{
+    margin-bottom: 60px;
+}
+.aside{
+    max-width: 272px;
+}
+.asideHeaderH3{
+    font-family: 'openSansBold', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 90%;
+}
+.asideHeaderH3::after{
+    content: "";
+
+    display: block;
+
+    height: 3px;
+    width: 66px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14px;
+    margin-bottom: 29px;
+    background-color: #e1d9bd;
+}
+.asidePreviewBlock{
+    margin-bottom: 21px;
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+.asidePreviewBlock:last-child{
+    margin-bottom: 0;
+}
+.asidePreviewImg{
+    width: 70px;
+    height: 70px;
+}
+.asidePreviewTime{
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: 'openSansRegular', sans-serif;
+    font-size: 12px;
+    color: #888;
+    line-height: 80%;
+}
+.asidePreviewH4{
+    font-family: 'openSansBold', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: calc(18/14*100%);
+}
+.asidePreviewH4 a{
+    color: #000;
+    text-decoration: none;
+}
+.asidePreviewH4 a:hover{
+    color: #b59f5b;
+}
+/* строка поиска */
+.asideSearch{
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 60px;
+}
+.asideSearchInput::before{
+    content: "строка поиска по сайту, введите свой запрос здесь.";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.asideSearchInput{
+    width: 223px;
+    height: 48px;
+    padding: 0 19px 0 19px;
+
+    background-color: #f4f7f6;
+
+    border: none;
+
+    font-family: 'openSansRegular', sans-serif;
+    color: #888;
+    
+}
+.asideSearchInput:focus, .asideSpamInput:focus{
+    outline: none;
+    border: 1px solid #b59f5b;
+}
+.asideSearchButton::before{
+    content: "кнопка отправки запроса из строки поиска";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.asideSearchButton{
+    width: 48px;
+    height: 48px;
+
+    background-image: url(../svg/search.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #b59f5b;
+    background-size: 18px 18px;
+    
+    border: none;
+
+    cursor: pointer;
+}
+.asideSearchButton:hover{
+    background-color: #323232;
+}
+/* строка рассылки */
+.asideSpamSection{
+    margin-bottom: 60px;
+}
+.asideSpam{
+    display: flex;
+    flex-direction: column;
+    row-gap: 17px;
+}
+.asideSpamInput::before{
+    content: "введите свой адрес электронной почты здесь для получения рассылки";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.asideSpamInput{
+    height: 48px;
+    padding: 0 19px 0 19px;
+    
+    background-color: #f4f7f6;
+    border: none;
+
+    font-family: 'openSansRegular', sans-serif;
+    font-size: 13px;
+    color: #888;
+}
+.asideSpamhButton::before{
+    content: "кнопка отправки введённого адреса электронной почты для получения рассылки";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.asideSpamButton{
+    height: 48px;
+
+    background-color: #b59f5b;
+    border: none;
+
+    font-family: 'openSansBold';
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.asideSpamButton:hover{
+    background-color: #323232;
+}
+/* начало секции тегов */
+.asideTags{
+    margin-bottom: 54px;
+}
+.asideTagsList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 4px;
+    column-gap: 5px;
+
+    list-style-type: none;
+}
+.asideTagsItem{
+    padding: 5px 14px 4px 14px;
+
+    border: 3px solid #eee;
+
+    font-family: 'openSansBold', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.asideTagsItem:hover{ 
+    border-color: #b59f5b;
+}
+/* боковые темы */
+.asideThemesH2{
+    font-family: 'openSansBold', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.asideThemesH2::after{
+    content: "";
+
+    display: block;
+
+    height: 3px;
+    width: 66px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6px;
+    margin-top: 10px;
+    background-color: #e1d9bd;
+}
+.asideThemesList{
+    display: flex;
+    flex-direction: column;
+
+    list-style-type: none;
+}
+.asideThemesItem{
+    padding: 12px 2px 12px 2px;
+
+    border-bottom: 1px solid #eee;
+    
+    font-family: 'openSansBold', sans-serif;
+    font-size: 14px;
+}
+.asideThemesItem a:hover{
+    color: #b59f5b;
+}
+.asideThemesItem span{
+    margin-left: 4px;
+    
+    font-size: 12px;
+    color: #b59f5b;
+    vertical-align: super;
+}
+/* подвал */
+.footer{
+    width: 1200px;
+    padding: 0 15px;
+
+    margin: 0 auto;
+}
+/* иконки соцсетей */
+.footerAddress{
+    padding: 31px 0;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+
+    background-color: #f4f7f6;
+}
+.footerAddressList{
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 28px; */
+    text-align: center;
+    list-style-type: none;
+}
+.footerAddressItem{
+    display: inline-block;
+    margin: 0 14px 0 14px;
+}
+.footerAddressItem a{
+    height: 20px;
+    width: 20px; 
+
+    display: inline-block;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.pinterest{
+    background-image: url(../svg/001-pinterest.svg);
+}
+.facebook{
+    background-image: url(../svg/002-facebook-logo.svg);
+}
+.tumblr{
+    background-image: url(../svg/003-tumblr.svg);
+}
+.twitter{
+    background-image: url(../svg/004-twitter.svg);
+}
+.instagram{
+    background-image: url(../svg/005-instagram.svg);
+}
+.visuallyHidden {
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+  } 
+/* копирайт */
+.footerCopyright{
+    text-align: center;
+}
+.footerCopyright a{
+    font-family: 'openSansBold', sans-serif;
+    font-size: 12px;
+    color: #999;
+}
+
+
